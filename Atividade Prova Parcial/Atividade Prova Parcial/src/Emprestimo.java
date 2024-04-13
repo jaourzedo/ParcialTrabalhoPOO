@@ -14,7 +14,7 @@ public class Emprestimo {
             this.idEmprestimo = idEmprestimo;
             this.status = status;
             try (Connection connection = Conexao.getConexao()) {
-                String sql = "UPDATE emprestimo SET status = ? WHERE id_emprestimo = ?";
+                String sql = "UPDATE emprestimo SET status = ? WHERE id_emprest2imo = ?";
                 PreparedStatement statement = connection.prepareStatement(sql);
                 statement.setString(1, status);
                 statement.setInt(2, idEmprestimo);

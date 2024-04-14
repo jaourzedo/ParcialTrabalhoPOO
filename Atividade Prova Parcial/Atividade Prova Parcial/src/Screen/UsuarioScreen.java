@@ -28,7 +28,7 @@ public class UsuarioScreen extends JFrame {
         pesquisarLivroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                pesquisarLivro();
+                //pesquisarLivro();
                 System.out.println("botão PesquisarLivro Clicado");
             }
         });
@@ -36,7 +36,7 @@ public class UsuarioScreen extends JFrame {
         pegarEmprestadoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                pegarEmprestado();
+                //pegarEmprestado();
                 System.out.println("botão PegarEmprestado Clicado");
             }
         });
@@ -44,7 +44,7 @@ public class UsuarioScreen extends JFrame {
         devolverLivroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                devolverLivro();
+                //devolverLivro();
                 System.out.println("botão DevolverLivro Clicado");
             }
         });

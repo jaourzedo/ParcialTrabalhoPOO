@@ -27,7 +27,7 @@ public class UsuarioScreen extends JFrame {
         JButton pegarEmprestadoButton = new JButton("Pegar Emprestado");
         JButton devolverLivroButton = new JButton("Devolver Livro");
 
-        setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
+        setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10)); // Layout de fluxo centralizado com espaçamento
 
         add(pesquisarLivroButton);
         add(pegarEmprestadoButton);

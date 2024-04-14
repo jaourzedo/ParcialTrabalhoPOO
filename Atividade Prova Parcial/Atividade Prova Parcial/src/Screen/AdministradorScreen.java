@@ -24,6 +24,8 @@ public class AdministradorScreen extends JFrame {
         btnGestaoLivros.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Adicione aqui o código para abrir a tela de gestão de livros
+                GestaoLivrosScreen gestaoLivrosScreen = new GestaoLivrosScreen();
+                gestaoLivrosScreen.setVisible(true);
             }
         });
 

@@ -52,6 +52,9 @@ public class LoginScreen extends JFrame implements ActionListener {
             // Abrir Administrador Screen
         } else if (username.equals(userNormal) && password.equals(userPassword)){
             // Abrir Usuario Screen
+            UsuarioScreen usuarioScreen = new UsuarioScreen();
+            this.setVisible(false);
+            usuarioScreen.setVisible(true);
         } else {
             JOptionPane.showMessageDialog(this, "Usuário não encontrado");
             SetNullFields();

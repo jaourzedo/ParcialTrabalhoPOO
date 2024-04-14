@@ -16,6 +16,7 @@ public class UsuarioScreen extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE); // Configura ação ao fechar janela
         setLocationRelativeTo(null); // Centraliza janela
 
+        JButton autenticarButton = new JButton("Autenticar");
         JButton pesquisarLivroButton = new JButton("Pesquisar Livro");
         JButton pegarEmprestadoButton = new JButton("Pegar Emprestado");
         JButton devolverLivroButton = new JButton("Devolver Livro");

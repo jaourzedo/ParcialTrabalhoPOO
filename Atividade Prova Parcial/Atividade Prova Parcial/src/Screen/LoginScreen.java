@@ -2,12 +2,19 @@ package Screen;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class LoginScreen extends JFrame {
+public class LoginScreen extends JFrame implements ActionListener {
     private final JLabel usernameLabel;
     private final JLabel passwordLabel;
     private final JTextField usernameField;
     private final JPasswordField passwordField;
+
+    private final String userAdm = "admin";
+    private final String admPassword = "admin123";
+    private final String userNormal = "user";
+    private final String userPassword = "user123";
 
     public LoginScreen() {
         setTitle("Login Screen");
@@ -22,6 +29,8 @@ public class LoginScreen extends JFrame {
         passwordField = new JPasswordField(20);
         JButton loginButton = new JButton("Login");
 
+        loginButton.addActionListener(this);
+
         // Set layout
         setLayout(new GridLayout(3, 2));
 
@@ -32,5 +41,28 @@ public class LoginScreen extends JFrame {
         add(passwordField);
         add(new JLabel());
         add(loginButton);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent a) {
+        String username = usernameField.getText();
+        String password = new String(passwordField.getPassword());
+
+        if (username.equals(userAdm) && password.equals(admPassword)){
+            // Abrir Administrador Screen
+        } else if (username.equals(userNormal) && password.equals(userPassword)){
+            // Abrir Usuario Screen
+            UsuarioScreen usuarioScreen = new UsuarioScreen();
+            this.setVisible(false);
+            usuarioScreen.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuário não encontrado");
+            SetNullFields();
+        }
+    }
+
+    private void SetNullFields(){
+        usernameField.setText("");
+        passwordField.setText("");
     }
 }

@@ -8,7 +8,7 @@ public class Usuario {
     // Métodos para autenticar, pesquisar livro, pegar emprestado e devolver livro
 
     public void pesquisarLivro() {
-        // Implemente a lógica de pesquisa de livro aqui
+        //List<Livro> livrosDisponiveis =
     }
 
     public void pegarEmprestado() {

@@ -1,5 +1,7 @@
 package Screen;
 
+import ServicesImplements.Livro;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,7 +16,6 @@ public class UsuarioScreen extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE); // Configura ação ao fechar janela
         setLocationRelativeTo(null); // Centraliza janela
 
-        JButton autenticarButton = new JButton("Autenticar");
         JButton pesquisarLivroButton = new JButton("Pesquisar Livro");
         JButton pegarEmprestadoButton = new JButton("Pegar Emprestado");
         JButton devolverLivroButton = new JButton("Devolver Livro");
@@ -28,7 +29,7 @@ public class UsuarioScreen extends JFrame {
         pesquisarLivroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                pesquisarLivro();
+                Livro.pesquisarLivro("");
                 System.out.println("botão PesquisarLivro Clicado");
             }
         });
@@ -36,7 +37,7 @@ public class UsuarioScreen extends JFrame {
         pegarEmprestadoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                pegarEmprestado();
+                //pegarEmprestado();
                 System.out.println("botão PegarEmprestado Clicado");
             }
         });
@@ -44,7 +45,7 @@ public class UsuarioScreen extends JFrame {
         devolverLivroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                devolverLivro();
+                //devolverLivro();
                 System.out.println("botão DevolverLivro Clicado");
             }
         });

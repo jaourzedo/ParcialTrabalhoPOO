@@ -50,6 +50,9 @@ public class LoginScreen extends JFrame implements ActionListener {
 
         if (username.equals(userAdm) && password.equals(admPassword)){
             // Abrir Administrador Screen
+            AdministradorScreen administradorScreen = new AdministradorScreen();
+            this.setVisible(false);
+            administradorScreen.setVisible(true);
         } else if (username.equals(userNormal) && password.equals(userPassword)){
             // Abrir Usuario Screen
             UsuarioScreen usuarioScreen = new UsuarioScreen();

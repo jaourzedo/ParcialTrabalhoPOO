@@ -18,12 +18,4 @@ public class Usuario {
     public void devolverLivro() {
         // Implemente a lógica para devolver um livro aqui
     }
-
-    // Exemplo de uso
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            UsuarioScreen usuarioScreen = new UsuarioScreen();
-            usuarioScreen.setVisible(true);
-        });
-    }
 }
